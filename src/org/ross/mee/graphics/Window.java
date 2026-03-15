@@ -2,6 +2,7 @@ package org.ross.mee.graphics;
 
 import static org.lwjgl.glfw.GLFW.*;
 import org.lwjgl.opengl.GL;
+import org.ross.mee.Engine;
 
 public class Window 
 {
@@ -15,7 +16,14 @@ public class Window
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 		glfwMakeContextCurrent(window_id);
-		glfwSwapInterval(1);
+		if (Engine.VSync)
+		{
+			glfwSwapInterval(1);
+		}
+		else
+		{
+			glfwSwapInterval(0);
+		}
 		GL.createCapabilities();
 		glfwShowWindow(window_id);
 	}

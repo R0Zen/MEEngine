@@ -17,7 +17,7 @@ public class BasicApp implements App
 
 	public void Init() 
 	{
-
+		
 	}
 
 	public void Process() 
