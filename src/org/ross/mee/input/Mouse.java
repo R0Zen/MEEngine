@@ -3,6 +3,7 @@ package org.ross.mee.input;
 import static org.lwjgl.glfw.GLFW.*;
 import java.util.ArrayList;
 import org.lwjgl.glfw.GLFWMouseButtonCallbackI;
+import org.ross.mee.Engine;
 import org.ross.mee.graphics.Window;
 
 public class Mouse 
@@ -14,8 +15,8 @@ public class Mouse
 	private int last_action;
 	private float mouse_x, mouse_y;
 	private ArrayList<InputEvent> mouse_events;
-	private boolean hide_mouse=false;
-	private boolean grab_mouse=false;
+	private boolean hide_mouse=Engine.input_mouse_hidden;
+	private boolean grab_mouse=Engine.input_mouse_grabed;
 	
 	
 	public Mouse()

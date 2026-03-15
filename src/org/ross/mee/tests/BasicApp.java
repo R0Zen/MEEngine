@@ -34,9 +34,4 @@ public class BasicApp implements App
 	{
 		
 	}
-
-	public String getTitle() 
-	{
-		return "MEEngine - Basic App";
-	}
 }
